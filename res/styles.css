@@ -1,0 +1,435 @@
+body {
+  margin: 0px;
+  background-color: #e6e2d3;
+  color: #b9936c; }
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase; }
+
+.content_wraper {
+  margin: 0 auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(75px, auto);
+  grid-gap: 5px; }
+
+.content_wraper_index {
+  margin: 0 auto;
+  padding: 10px; }
+
+/*GRID AREAS*/
+header {
+  grid-area: header; }
+
+section {
+  grid-area: section; }
+
+aside {
+  grid-area: aside; }
+
+footer {
+  grid-area: footer; }
+
+/*SECTION INDEX */
+section.index {
+  overflow-x: hidden; }
+
+.slide_1 {
+  padding-top: 10%; }
+
+.slide_2, .slide_4 {
+  transform: translateX(500px); }
+
+.slide_3 {
+  transform: translateX(-500px); }
+
+.slide_2, .slide_4, .slide_3 {
+  height: 100%;
+  opacity: 0;
+  transition: all 1.5s ease-out; }
+
+.slide_2.fade-in, .slide_3.fade-in, .slide_4.fade-in {
+  opacity: 1;
+  transform: translateX(0); }
+
+header {
+  padding: 10px;
+  color: #b9936c; }
+  header .header_left {
+    float: left; }
+  header .header_right {
+    height: 60px;
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px; }
+  header a img.menu {
+    padding-right: 5%;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s; }
+  header .left_nav {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+
+noscript {
+  display: block;
+  text-align: center; }
+  noscript h4 {
+    color: red; }
+
+header form:after, .header_wraper:after, .slide_1:after, .slide_2:after, .slide_3:after, .slide_4:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+footer div {
+  margin: 0 auto;
+  max-width: 50%;
+  text-align: center;
+  padding: 10px; }
+footer a {
+  color: #936d46; }
+footer a:hover {
+  color: #705335;
+  text-decoration: none; }
+
+/*GENERAL STYLES*/
+label.error {
+  color: red; }
+
+a {
+  text-decoration: none;
+  color: #936d46; }
+
+a:hover {
+  color: #2b2014; }
+
+input {
+  border-style: none;
+  background-color: #d4cdb2;
+  padding: 5px;
+  width: 100px;
+  color: #b1865b;
+  border-radius: 5px; }
+
+input:focus {
+  border-style: none;
+  background-color: #cac2a2; }
+
+.button {
+  background-color: #d4cdb2;
+  display: inline-block;
+  border: none;
+  color: #b9936c;
+  margin-top: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9em;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-transform: uppercase; }
+
+.button:hover {
+  background-color: #b8ac82; }
+
+.create_account {
+  width: 50%;
+  margin: 0 auto; }
+  .create_account .button {
+    width: 100%; }
+
+/*SETTINGS*/
+section.settings {
+  margin: 0 auto;
+  padding: 20px; }
+  section.settings input.settings {
+    width: 30%; }
+  section.settings input[type=checkbox], section.settings input[type=radio] {
+    display: inline-block;
+    padding: 15px; }
+  section.settings div.avatar {
+    display: inline-block; }
+    section.settings div.avatar img {
+      height: 75px; }
+
+/*ASIDE STYLES*/
+aside {
+  text-align: center; }
+  aside span {
+    color: #1e3e71; }
+
+div.register {
+  margin: 0 auto;
+  background-color: #ddd7c3;
+  border: 5px solid #d4cdb2; }
+  div.register input.register {
+    background-color: #d4cdb2;
+    border: 2px solid #cac2a2; }
+
+fieldset {
+  border: 0px;
+  margin: 5px;
+  padding: 10px; }
+
+form.add_masure {
+  width: 100%;
+  margin: 0 auto; }
+
+form.add_masure .col {
+  float: left;
+  padding-right: 10px; }
+
+form.add_masure .cols:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+form.add_masure textarea {
+  border-style: none;
+  background-color: #ddd7c3; }
+
+form.add_masure label {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold; }
+
+form.add_masure input, form.add_masure label {
+  display: block; }
+
+/*FORM HEADER*/
+header form {
+  display: inline;
+  display: none;
+  position: relative; }
+  header form label {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold; }
+
+.close_window {
+  position: absolute;
+  display: block;
+  top: -10px;
+  right: -10px;
+  cursor: pointer; }
+
+.login_buttons {
+  float: right;
+  margin: 10px; }
+
+.login_buttons div {
+  display: inline-block; }
+
+/*TABLE STYLES*/
+table.main_table {
+  margin: 0 auto;
+  color: #b9936c; }
+  table.main_table tr:nth-child(even), table.main_table thead {
+    background-color: #ddd7c3; }
+  table.main_table th, table.main_table td {
+    padding: 5px;
+    text-align: left; }
+  table.main_table tbody tr:hover {
+    background-color: #5686d2; }
+
+td.table_icons {
+  background-color: #e6e2d3;
+  display: none; }
+  td.table_icons img.table_ico {
+    height: 10px;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 2px; }
+  td.table_icons a {
+    display: inline-block;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 2px; }
+  td.table_icons a:hover {
+    background-color: #1e3e71; }
+
+@media only screen and (min-width: 980px) {
+  .content_wraper {
+    max-width: 80%;
+    grid-template-areas: "header header header header" "section section section aside" "section section section aside" "section section section aside" "section section section aside" "section section section aside" "section section section aside" "footer footer footer footer"; }
+
+  .content_wraper_index {
+    max-width: 80%; }
+
+  .slide_2, .slide_4, .slide_3, .slide_5 {
+    padding: 10%; }
+
+  header a img.menu {
+    height: 50px; }
+  header a img.menu:hover {
+    height: 60px; }
+  header img.main_logo {
+    height: 70px; }
+
+  .banner {
+    max-width: 90%; }
+
+  section.settings {
+    width: 80%; }
+
+  aside span {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    font-size: 2em; }
+
+  div.register {
+    width: 40%;
+    padding: 15px; }
+    div.register input.register {
+      width: 40%; }
+
+  section {
+    padding: 10px; }
+
+  .section_left {
+    float: left; }
+
+  svg {
+    height: 480px; }
+
+  table.main_table {
+    width: 95%; }
+
+  .slide_5 {
+    transform: translateX(-500px); }
+
+  .slide_5 {
+    height: 100%;
+    opacity: 0;
+    transition: all 1.5s ease-out; }
+
+  .slide_5.fade-in {
+    opacity: 1;
+    transform: translateX(0); } }
+@media only screen and (max-width: 980px) {
+  .content_wraper {
+    max-width: 90%;
+    grid-template-areas: "header header header header" "section section section section" "section section section section" "section section section section" "section section section section" "section section section section" "aside aside aside aside" "footer footer footer footer"; }
+
+  .content_wraper_index {
+    max-width: 90%; }
+
+  .slide_2, .slide_4, .slide_3, .slide_5 {
+    padding: 5%; }
+
+  header a img.menu {
+    height: 40px; }
+  header a img.menu:hover {
+    height: 50px; }
+  header img.main_logo {
+    height: 60px; }
+
+  .banner {
+    max-width: 100%; }
+
+  section.settings {
+    width: 90%; }
+
+  aside h5 {
+    display: inline; }
+  aside span {
+    display: inline; }
+
+  div.register {
+    width: 80%;
+    padding: 10px; }
+    div.register input.register {
+      width: 50%; }
+
+  .section_right {
+    position: fixed;
+    bottom: 10px;
+    right: 0; }
+
+  .section_left {
+    width: 60%;
+    margin: 0 auto; }
+
+  svg {
+    height: 360px; }
+
+  header form {
+    background-color: #dfd9c6;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px; }
+    header form label {
+      display: block; }
+    header form input {
+      width: 75%; }
+
+  .slide_5 {
+    height: 100%;
+    opacity: 1; } }
+@media only screen and (max-width: 480px) {
+  .content_wraper {
+    max-width: 98%;
+    grid-template-areas: "header header header header" "section section section section" "section section section section" "section section section section" "section section section section" "section section section section" "aside aside aside aside" "footer footer footer footer"; }
+
+  .content_wraper_index {
+    max-width: 98%; }
+
+  .slide_2, .slide_4, .slide_3, .slide_5 {
+    padding: 2%; }
+
+  header a img.menu {
+    height: 30px; }
+  header a img.menu:hover {
+    height: 40px; }
+  header img.main_logo {
+    height: 50px; }
+
+  .banner {
+    max-width: 100%; }
+
+  section.settings {
+    width: 98%; }
+
+  aside h5 {
+    display: inline; }
+  aside span {
+    display: inline; }
+
+  div.register {
+    width: 95%;
+    padding: 5px; }
+    div.register input.register {
+      width: 75%; }
+
+  .section_right {
+    position: fixed;
+    bottom: 10px;
+    right: -60px; }
+
+  .section_left {
+    width: 95%;
+    margin: 0 auto; }
+
+  svg {
+    height: 180px; }
+
+  table.main_table {
+    width: 100%; }
+
+  .slide_5 {
+    height: 100%;
+    opacity: 1; } }
+
+/*# sourceMappingURL=styles.css.map */

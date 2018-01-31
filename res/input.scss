@@ -1,0 +1,809 @@
+
+@import "colors";
+body{
+
+margin:0px;
+background-color: $b_color;
+color: $font_color;
+
+}
+
+h1, h2, h3, h4, h5 {
+
+  text-transform: uppercase;
+}
+
+
+.content_wraper{
+
+  margin: 0 auto;
+  padding:10px;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: minmax(75px,auto);
+  grid-gap:5px;
+
+}
+
+.content_wraper_index{
+
+
+  margin: 0 auto;
+  padding:10px;
+
+}
+
+/*GRID AREAS*/
+header{
+  grid-area: header;
+}
+section{
+  grid-area: section;
+}
+aside{
+  grid-area: aside;
+}
+footer{
+  grid-area: footer;
+}
+
+
+/*SECTION INDEX */
+
+section.index{
+
+  overflow-x: hidden;
+
+}
+
+
+//////////SLIDES/////////
+
+
+.slide_1{
+
+  padding-top: 10%;
+
+
+
+}
+.slide_2,.slide_4{
+
+
+
+      transform: translateX(500px);
+
+ }
+
+.slide_3{
+
+  transform: translateX(-500px);
+
+}
+
+.slide_2,.slide_4,.slide_3{
+
+    height: 100%;
+
+    opacity:0;
+    transition: all 1.5s ease-out;
+}
+
+.slide_2.fade-in, .slide_3.fade-in, .slide_4.fade-in{
+
+  opacity:1;
+  transform: translateX(0);
+}
+
+
+header{
+
+      padding:10px;
+      color: $font_color;
+
+      .header_left{
+          float:left;
+        }
+
+      .header_right{
+          height:60px;
+          float:right;
+          padding-right:10px;
+          padding-top:10px;
+        }
+
+       a{
+
+            img.menu{
+
+              margin-right: 5%;
+
+              -webkit-transition-duration: 0.4s;
+              /* Safari */
+              transition-duration: 0.4s;
+            }
+
+
+
+        }
+
+      .left_nav{
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+
+}
+
+
+
+noscript{
+  display: block;
+  text-align: center;
+  h4{
+    color:red;
+  }
+}
+
+header form:after, .header_wraper:after, .slide_1:after, .slide_2:after, .slide_3:after, .slide_4:after{
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+footer{
+
+   div{
+
+   margin: 0 auto;
+   max-width: 50%;
+   text-align: center;
+   padding:10px;
+  }
+   a{
+    color:darken($font_color, 15);
+  }
+  a:hover{
+    color: darken($font_color, 25);
+  text-decoration: none;
+  }
+}
+
+
+/*GENERAL STYLES*/
+
+label.error{
+
+  color: red;
+
+}
+
+
+a{
+  text-decoration: none;
+  color: darken($font_color,15);
+}
+
+a:hover{
+  color: darken($font_color,45);
+}
+
+input {
+  border-style: none;
+  background-color: darken($b_color,10);
+  padding: 5px;
+  width: 100px;
+  color: darken($font_color,5);
+  border-radius: 5px;}
+
+  input:focus {
+    border-style: none;
+    background-color: darken($b_color,15); }
+
+.button {
+  background-color:darken($b_color,10);
+  display:inline-block;
+  border: none;
+  color: $font_color;
+  margin-top: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 0.9em;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-transform: uppercase; }
+
+  .button:hover {
+     background-color: darken($b_color,25); }
+
+
+
+.create_account{
+  width:50%;
+  margin: 0 auto;
+  .button{
+    width:100%;
+  }
+}
+
+
+
+  /*SETTINGS*/
+
+  section.settings{
+
+    margin: 0 auto;
+    padding:20px;
+
+
+    input.settings{
+      width: 30%;
+    }
+    input[type=checkbox], input[type=radio]{
+
+      display:inline-block;
+      padding:15px;
+    }
+
+    div.avatar{
+      display: inline-block;
+
+      img{
+        height:75px;
+      }
+    }
+
+  }
+
+  /*ASIDE STYLES*/
+
+  aside{
+
+    text-align: center;
+
+
+
+
+      span{
+
+        color:$h_color;
+
+      }
+
+  }
+
+  // REGISTER
+
+  div.register{
+
+
+    margin: 0 auto;
+    background-color: darken($b_color, 5);
+
+    border: 5px solid darken($b_color, 10);
+
+    input.register{
+      background-color: darken($b_color, 10);
+
+      border: 2px solid darken($b_color, 15);
+
+
+    }
+  }
+
+  // CHARTS SETTINGS
+
+  fieldset{
+    border: 0px;
+    margin: 5px;
+    padding: 10px;
+  }
+
+
+
+  form.add_masure {
+
+    width: 100%;
+    margin: 0 auto; }
+
+
+    form.add_masure .col {
+
+      float: left;
+      padding-right: 10px;
+     }
+
+    form.add_masure .cols:after {
+      content: "";
+      display: block;
+      clear: both;
+     }
+
+    form.add_masure textarea {
+      border-style: none;
+      background-color: darken($b_color,5); }
+
+    form.add_masure label {
+      padding-top: 10px;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: bold; }
+    form.add_masure input, form.add_masure label {
+      display: block; }
+
+
+
+      /*FORM HEADER*/
+
+      header form{
+
+        display: inline;
+        display: none;
+        position: relative;
+
+
+      label{
+        padding-top: 10px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: bold;}
+
+      }
+
+      .close_window{
+        position: absolute;
+        display: block;
+        top:-10px;
+        right:-10px;
+        cursor: pointer;
+
+      }
+
+      .login_buttons{
+
+        float:right;
+        margin:10px;
+      }
+
+
+      .login_buttons div{
+        display:inline-block;
+      }
+
+
+
+      /*TABLE STYLES*/
+
+      table.main_table {
+
+          margin: 0 auto;
+          color: $font_color;
+
+              tr:nth-child(even), thead {
+
+                  background-color: darken($b_color,5);
+              }
+
+              th, td {
+
+                  padding: 5px;
+                  text-align: left;
+              }
+
+              tbody tr:hover{
+                  background-color: lighten($h_color, 30);
+              }
+
+      }
+
+
+      td.table_icons{
+
+          background-color: $b_color;
+          display: none;
+
+              img.table_ico{
+
+                height:10px;
+                padding:2px;
+                margin:2px;
+                border-radius: 2px;
+              }
+
+              a{
+
+                display: inline-block;
+                padding:2px;
+                margin:2px;
+                border-radius: 2px;
+              }
+
+              a:hover{
+
+                background-color: $h_color;
+              }
+
+      }
+
+
+
+///////////////////////////////// NO MEDIA QUERY STYLES ABOVE ////////////
+
+
+@media only screen and (min-width : 980px) {
+
+
+  .content_wraper{
+
+    max-width: 80%;
+
+    grid-template-areas:
+    "header header header header"
+    "section section section aside"
+    "section section section aside"
+    "section section section aside"
+    "section section section aside"
+    "section section section aside"
+    "section section section aside"
+    "footer footer footer footer";
+
+  }
+
+  .content_wraper_index{
+
+    max-width: 80%;
+  }
+
+
+
+  .slide_2,.slide_4,.slide_3, .slide_5 {
+
+      padding:10%;
+  }
+
+
+  header{
+    a{
+        img.menu{
+
+          height:50px;
+        }
+
+        img.menu:hover{
+          height:60px;
+        }
+    }
+    img.main_logo {
+        height:70px;
+    }
+  }
+
+  .banner{
+    max-width: 90%;
+  }
+
+
+  section.settings{
+    width:80%;
+
+  }
+
+
+
+  aside{
+
+
+      span{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display:block;
+        font-size: 2em;
+
+      }
+
+  }
+
+
+  div.register{
+
+    width:40%;
+    padding:15px;
+
+    input.register{
+
+      width: 40%;
+    }
+  }
+
+
+  section{
+    padding:10px;
+
+  }
+
+
+  .section_left{
+    float:left;
+  }
+
+  svg{
+    height:480px;
+  }
+
+  table.main_table {
+      width: 95%;
+}
+
+.slide_5{
+
+  transform: translateX(-500px);
+
+}
+
+.slide_5 {
+
+    height: 100%;
+
+    opacity:0;
+    transition: all 1.5s ease-out;
+}
+
+.slide_5.fade-in{
+
+  opacity:1;
+  transform: translateX(0);
+}
+
+
+}
+
+
+
+@media only screen and (max-width : 980px) {
+
+
+  .content_wraper{
+
+    max-width: 90%;
+
+    grid-template-areas:
+    "header header header header"
+    "section section section section"
+    "section section section section"
+    "section section section section"
+    "section section section section"
+    "section section section section"
+      "aside aside aside aside"
+    "footer footer footer footer";
+
+  }
+
+  .content_wraper_index{
+
+    max-width: 90%;
+  }
+
+  .slide_2,.slide_4,.slide_3, .slide_5 {
+
+      padding:5%;
+  }
+
+
+
+  header{
+    a{
+        img.menu{
+
+          height:40px;
+        }
+
+        img.menu:hover{
+          height:50px;
+        }
+    }
+    img.main_logo {
+        height:60px;
+    }
+  }
+
+  .banner{
+    max-width: 100%;
+  }
+
+  section.settings{
+    width:90%;
+
+  }
+
+  aside{
+
+      h5{
+        display: inline;
+      }
+      span{
+        display:inline;
+
+
+      }
+
+  }
+
+  div.register{
+
+    width:80%;
+    padding:10px;
+
+    input.register{
+
+      width: 50%;
+    }
+  }
+
+
+
+  .section_right{
+    position: fixed;
+   bottom: 10px;
+   right: 0;
+  
+  }
+  .section_left{
+  width:60%;
+  margin:0 auto;
+  }
+
+  svg{
+    height:360px;
+  }
+
+
+  header form {
+    background-color: darken($b_color, 4);
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    label{
+    display: block;
+  }
+  input{
+    width: 75%;
+  }
+}
+
+
+
+.slide_5 {
+
+    height: 100%;
+
+    opacity:1;
+
+}
+
+
+
+
+}
+
+
+@media only screen and (max-width : 480px) {
+
+
+  .content_wraper{
+
+    max-width: 98%;
+
+    grid-template-areas:
+    "header header header header"
+    "section section section section"
+    "section section section section"
+    "section section section section"
+    "section section section section"
+    "section section section section"
+    "aside aside aside aside"
+    "footer footer footer footer";
+
+  }
+
+
+  .content_wraper_index{
+
+    max-width: 98%;
+  }
+
+
+  .slide_2,.slide_4,.slide_3, .slide_5 {
+
+      padding:2%;
+  }
+
+
+  header{
+    a{
+        img.menu{
+
+          height:30px;
+        }
+
+        img.menu:hover{
+          height:40px;
+        }
+    }
+    img.main_logo {
+        height:50px;
+    }
+  }
+
+
+  .banner{
+    max-width: 100%;
+  }
+
+
+  section.settings{
+    width:98%;
+
+  }
+
+  aside{
+
+      h5{
+        display: inline;
+      }
+      span{
+        display:inline;
+
+
+      }
+
+  }
+
+  div.register{
+
+    width:95%;
+    padding:5px;
+
+    input.register{
+
+      width: 75%;
+    }
+  }
+
+
+  .section_right{
+    position: fixed;
+    bottom:10px;
+     right: -60px;
+  //  height: 50%;
+  }
+  .section_left{
+  width:95%;
+  margin:0 auto;
+  }
+
+  svg{
+    height:180px;
+  }
+
+  table.main_table {
+      width: 100%;
+    }
+
+    .slide_5 {
+
+        height: 100%;
+
+        opacity:1;
+
+    }
+
+}

@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand");
+body{
+
+margin:0px;
+background-color: #050E28;
+background-image: url("../img/graphy.png");
+color: #fff;
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.content_wraper{
+
+  max-width: 100%;
+  margin: 0 auto;
+  padding:10px;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: minmax(75px,auto);
+  grid-gap:5px;
+  grid-template-areas:
+  "header header header header"
+  "section section section aside"
+  "section section section aside"
+  "section section section aside"
+  "section section section aside"
+  "section section section aside"
+  "section section section aside"
+  "footer footer footer footer";
+
+}
+
+/*GRID AREAS*/
+header{
+  grid-area: header;
+}
+section{
+  grid-area: section;
+}
+aside{
+  grid-area: aside;
+}
+footer{
+  grid-area: footer;
+}
+/*HEADER STYLES*/
+
+header{
+
+  padding:10px;
+  color: #fff;
+
+}
+
+header .header_left{
+
+  float:left;
+}
+
+header .header_right{
+  float:right;
+  padding-right:10px;
+  padding-top:10px;
+}
+
+header h1, header h3{
+  margin:0px;
+  display:inline;
+}
+
+header a{
+  display:inline-block;
+  text-decoration: none;
+  padding: 5px;
+  }
+
+header a:hover{
+  /*background-color: #0e266c;*/
+
+      font-weight: bolder;
+      color: #eaece5;
+}
+
+header a.register{
+  border:2px;
+  padding:1px;
+
+}
+
+header a:link,header a:visited,header a:active {
+    color: #fff;
+}
+
+
+
+
+header a:hover {
+    color: #BDA500;
+}
+
+header img{
+  height:100px;
+  display: inline;
+}
+
+/*FORM HEADER*/
+
+header form{
+  display: inline;
+}
+
+input {
+    border: 2px solid #211D00;
+    border-radius: 4px;
+    background-color: #050E28;
+    color:#fff;
+    padding:2px;
+}
+
+header button{
+    background-color: #050E28;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 2px solid #211D00;
+    cursor: pointer;
+
+}
+
+
+.login_buttons{
+  float:right;
+  margin:10px;
+}
+.login_buttons div{
+  display:inline-block;
+}
+header form:after{
+  content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+.header_wraper:after{
+  content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+/*ASIDE STYLES*/
+
+aside{
+  text-align: center;
+
+}
+
+aside span{
+  display:block;
+
+}
+/*aside h3 {
+  display:block;
+}*/
+
+/*FOOTER STYLES*/
+
+footer{
+
+}
+
+footer div{
+
+ margin: 0 auto;
+ max-width: 50%;
+ text-align: center;
+ padding:10px;
+}
+footer a{
+  color:#E7D9CA;
+}
+footer a:hover{
+  color: white;
+text-decoration: none;
+}
+
+
+/*TABLE STYLES*/
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  color: #FAFBFF; }
+  table tr:nth-child(odd) {
+    background-color: #8a8a8a; }
+  table th, table td {
+    padding: 5px;
+    text-align: left; }
+  table tr:first-child {
+    background-color: #4a4a4a; }
+
+
+/*SECTION STYLES*/
+
+section{
+  padding:10px;
+
+}
+
+.section_wraper{
+  width:80%;
+  margin: 0 auto;
+}
+
+.section_right{
+  float: right;
+}
+.section_left{
+  float:left;
+}
+
+svg{
+  height:480px;
+}
+
+/*FORM ADD MASURE*/
+
+
+.man{
+  display:none;
+}
+form.add_masure {
+
+  width: 100%;
+margin: 0 auto; }
+  form.add_masure button, button.switcher {
+    background-color: #050E28;
+    display:inline-block;
+    border: none;
+    color: #FAFBFF;
+    margin-top: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 0.9em;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-transform: uppercase; }
+  form.add_masure button:hover, button.switcher:hover {
+    background-color: #94a9ff; }
+  form.add_masure .col {
+    float: left;
+    padding-right: 10px; }
+  form.add_masure .cols:after {
+    content: "";
+    display: block;
+    clear: both; }
+  form.add_masure input {
+    border-style: none;
+    background-color: #08163f;
+    padding: 5px;
+    width: 100px;
+    color: #FAFBFF; }
+  form.add_masure textarea {
+    border-style: none;
+    background-color: #08163f; }
+  form.add_masure input:focus {
+    border-style: none;
+    background-color: #091948; }
+  form.add_masure label {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold; }
+  form.add_masure input, form.add_masure label {
+    display: block; }
+
+
+/*HIDING PATHS*/
